@@ -39,8 +39,7 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     system \
-    vbmeta \
-    vendor
+    vbmeta
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -71,24 +70,19 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     Snap
 
-# Display
-PRODUCT_PACKAGES += \
-    libvulkan
-
 # DAC
 PRODUCT_PACKAGES += \
     QuadDACPanel
 
-#Doze
+# Display
 PRODUCT_PACKAGES += \
-    LGEDoze
+    libvulkan
 
 # FM packages
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \
 	FM2 \
-	qcom.fmradio \
-	init.qti.fm.sh
+	qcom.fmradio
 
 PRODUCT_BOOT_JARS += qcom.fmradio
 
@@ -112,10 +106,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-#ThinQ Button
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl
 
 # Update engine
 PRODUCT_PACKAGES += \

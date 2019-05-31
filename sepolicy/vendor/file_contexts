@@ -1,0 +1,8 @@
+# Files in rootfs
+/ftm(/.*)?                      u:object_r:ftm_file:s0
+/misc(/.*)?                     u:object_r:misc_file:s0
+/persdata(/.*)?                 u:object_r:persdata_file:s0
+/vzw(/.*)?                      u:object_r:vzw_file:s0
+/carrier(/.*)?                  u:object_r:carrier_file:s0
+/eri(/.*)?                      u:object_r:eri_file:s0
+# /vendor/firmware_mnt(/.*)?

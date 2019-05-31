@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carrier_config_list>
-    <carrier_config>
-        <boolean name="world_phone_bool" value="true" />
-    </carrier_config>
     <carrier_config mcc="204" mnc="04" gid1="BAE0000000000000">
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
         <boolean name="carrier_volte_override_wfc_provisioning_bool" value="true" />
@@ -150,7 +147,6 @@
         <boolean name="notify_vt_handover_to_wifi_failure_bool" value="true" />
         <boolean name="operator_selection_expand_bool" value="true" />
         <boolean name="show_apn_setting_cdma_bool" value="true" />
-        <boolean name="show_cdma_choices_bool" value="true" />
         <boolean name="support_pause_ims_video_calls_bool" value="true" />
         <boolean name="video_calls_can_be_hd_audio" value="true" />
         <boolean name="wifi_calls_can_be_hd_audio" value="true" />

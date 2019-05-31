@@ -56,8 +56,11 @@ endif
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Display
-TARGET_USES_HWC2 := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
+TARGET_DISABLE_DISPLAY := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -114,14 +117,14 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
 #Treble
 #BOARD_VNDK_RUNTIME_DISABLE := true
 BOARD_VNDK_VERSION := current
-#PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Verified Boot
-BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
+#BOARD_AVB_ENABLE := true
+#BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 2
 
 # Inherit from the proprietary version
 -include vendor/lge/sdm845-common/BoardConfigVendor.mk

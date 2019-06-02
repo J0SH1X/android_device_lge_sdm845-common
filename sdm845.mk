@@ -86,11 +86,16 @@ PRODUCT_PACKAGES += \
 # FM packages
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \
+	android.hardware.broadcastradio@1.0-impl \
 	FM2 \
 	qcom.fmradio \
-	init.qti.fm.sh
+	qcom.fmradio.xml
 
 PRODUCT_BOOT_JARS += qcom.fmradio
+
+#GestureHandler
+PRODUCT_PACKAGES += \
+	GestureHandler 
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -102,9 +107,11 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.1-service \
+    com.android.nfc_extras \
     NfcNci \
-    Tag \
-    com.android.nfc_extras
+    SecureElement \
+    Tag
 
 # Telephony
 PRODUCT_PACKAGES += \

@@ -49,7 +49,8 @@ while [ "$1" != "" ]; do
 done
 
 if [ -z "$SRC" ]; then
-    SRC=/home/j0sh1x/mount/extracteddz/mount/system/
+    SRC=/home/j0sh1x/extracteddz/mount
+
 fi
 
 # Initialize the helper for common device

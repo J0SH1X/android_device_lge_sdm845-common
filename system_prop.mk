@@ -68,7 +68,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_partial_split=1 \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=2 \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=560
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \

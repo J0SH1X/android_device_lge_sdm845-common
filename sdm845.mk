@@ -95,7 +95,14 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 
 #GestureHandler
 PRODUCT_PACKAGES += \
-	GestureHandler 
+	GestureHandler \
+	vendor.lineage.touch@1.0-service.judyln
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    android.hidl.manager@1.0-java
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \

@@ -83,6 +83,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LGEDoze
 
+#Fingerprint
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service
+
 # FM packages
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \

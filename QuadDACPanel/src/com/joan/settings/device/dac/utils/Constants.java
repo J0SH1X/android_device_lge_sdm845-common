@@ -34,8 +34,8 @@ public class Constants {
     public static final String PROPERTY_HIFI_DAC_MODE = "persist.vendor.lge.audio.hifi_dac.mode";
     public static final String PROPERTY_HIFI_DAC_AVC_VOLUME = "persist.vendor.lge.audio.hifi_dac.avc_volume";
 
-    public static final String HEADSET_TYPE_SYSFS = "/sys/devices/soc/c175000.i2c/i2c-1/1-0048/headset_type";
-    public static final String AVC_VOLUME_SYSFS = "/sys/devices/soc/c175000.i2c/i2c-1/1-0048/avc_volume";
+    public static final String HEADSET_TYPE_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/headset_type";
+    public static final String AVC_VOLUME_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/avc_volume";
 
     public static final HashMap<Double, Integer> balanceHashMap = new HashMap<>();
     public static final HashMap<Integer, Double> balanceHashMapReverse = new HashMap<>();

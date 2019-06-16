@@ -1,4 +1,4 @@
-package org.lineageos.settings.device.dac;
+package com.joan.settings.device.dac;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import android.util.Log;
 
-import org.lineageos.settings.device.dac.utils.QuadDAC;
+import com.joan.settings.device.dac.utils.QuadDAC;
 
 public class QuadDACTileService extends TileService {
 

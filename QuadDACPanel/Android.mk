@@ -36,7 +36,10 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res \
-    $(TOP)/packages/resources/devicesettings/res
+    frameworks/support/v14/preference/res \
+    frameworks/support/v7/appcompat/res \
+    frameworks/support/v7/preference/res \
+    frameworks/support/v7/recyclerview/res
 
 LOCAL_MODULE_TAGS := optional
 

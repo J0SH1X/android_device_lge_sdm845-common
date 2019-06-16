@@ -1,4 +1,4 @@
-package org.lineageos.settings.device.dac;
+package com.joan.settings.device.dac;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

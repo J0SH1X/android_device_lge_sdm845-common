@@ -1,4 +1,4 @@
-package org.lineageos.settings.device.dac.ui;
+package com.joan.settings.device.dac.ui;
 
 
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.widget.TextView;
 
-import org.lineageos.settings.device.dac.R;
-import org.lineageos.settings.device.dac.utils.Constants;
-import org.lineageos.settings.device.dac.utils.QuadDAC;
+import com.joan.settings.device.dac.R;
+import com.joan.settings.device.dac.utils.Constants;
+import com.joan.settings.device.dac.utils.QuadDAC;
 
 public class BalancePreference extends Preference {
 

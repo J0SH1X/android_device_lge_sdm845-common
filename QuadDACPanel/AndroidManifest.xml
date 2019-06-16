@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:sharedUserId="android.uid.system"
-    package="org.lineageos.settings.device.dac"
-    android:versionCode="5"
-    android:versionName="1.1.3">
+    package="com.joan.settings.device.dac"
+    android:versionCode="6"
+    android:versionName="1.2.0">
 
 
     <uses-permission android:name="android.permission.INJECT_EVENTS"/>
-    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <uses-sdk
@@ -22,7 +21,7 @@
 
         <provider
             android:name=".QuadDACPanelSearchIndexablesProvider"
-            android:authorities="org.lineageos.settings.device.dac"
+            android:authorities="com.joan.settings.device.dac"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

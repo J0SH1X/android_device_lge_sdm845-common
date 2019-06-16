@@ -1,10 +1,10 @@
-package com.joan.settings.device.dac.utils;
+package com.judy.settings.device.dac.utils;
 
 import android.media.AudioSystem;
 import android.os.SystemProperties;
 import android.util.Log;
 
-import com.joan.settings.device.util.FileUtils;
+import com.judy.settings.device.util.FileUtils;
 
 public class QuadDAC {
 

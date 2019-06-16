@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.joan.settings.device.dac;
+package com.judy.settings.device.dac;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -23,7 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
-import com.joan.settings.device.dac.utils.QuadDAC;
+import com.judy.settings.device.dac.utils.QuadDAC;
 
 public class Startup extends BroadcastReceiver {
 

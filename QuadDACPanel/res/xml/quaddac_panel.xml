@@ -45,7 +45,7 @@
     <PreferenceCategory
         android:title="@string/quad_dac_balance" >
 
-        <com.joan.settings.device.dac.ui.BalancePreference
+        <com.judy.settings.device.dac.ui.BalancePreference
             android:key="balance"
             android:summary="@string/quad_dac_balance_summary"
             android:title="" />

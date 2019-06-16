@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.joan.settings.device.util;
+package com.judy.settings.device.util;
 
 import android.util.Log;
 

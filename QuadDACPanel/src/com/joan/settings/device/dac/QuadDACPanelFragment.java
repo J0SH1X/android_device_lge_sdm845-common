@@ -1,4 +1,4 @@
-package com.joan.settings.device.dac;
+package com.judy.settings.device.dac;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,9 +16,9 @@ import android.util.Log;
 import android.view.MenuItem;
 
 
-import com.joan.settings.device.dac.ui.BalancePreference;
-import com.joan.settings.device.dac.utils.Constants;
-import com.joan.settings.device.dac.utils.QuadDAC;
+import com.judy.settings.device.dac.ui.BalancePreference;
+import com.judy.settings.device.dac.utils.Constants;
+import com.judy.settings.device.dac.utils.QuadDAC;
 
 public class QuadDACPanelFragment extends PreferenceFragment
         implements OnPreferenceChangeListener {

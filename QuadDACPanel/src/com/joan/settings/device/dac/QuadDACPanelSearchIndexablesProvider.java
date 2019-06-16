@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.joan.settings.device.dac;
+package com.judy.settings.device.dac;
 
 
 import android.database.Cursor;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:sharedUserId="android.uid.system"
-    package="com.joan.settings.device.dac"
+    package="com.judy.settings.device.dac"
     android:versionCode="6"
     android:versionName="1.2.0">
 
@@ -21,7 +21,7 @@
 
         <provider
             android:name=".QuadDACPanelSearchIndexablesProvider"
-            android:authorities="com.joan.settings.device.dac"
+            android:authorities="com.judy.settings.device.dac"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

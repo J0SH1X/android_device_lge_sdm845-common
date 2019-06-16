@@ -1,0 +1,6 @@
+on boot
+    # QuadDac
+    chown system system /sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/headset_type
+    chmod 0644 /sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/headset_type
+    chown system system /sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/avc_volume
+    chmod 0644 /sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/avc_volume

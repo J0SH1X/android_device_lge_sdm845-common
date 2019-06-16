@@ -79,6 +79,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     QuadDACPanel
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/QuadDacPanel.rc:system/etc/init/QuadDacPanel.rc
+
 #Doze
 PRODUCT_PACKAGES += \
     LGEDoze

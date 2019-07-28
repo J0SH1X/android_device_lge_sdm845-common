@@ -589,6 +589,10 @@ vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
 
+# Power-off alarm
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+vendor/lib/vendor.qti.hardware.alarm@1.0.so
+
 # SDM
 lib/libsdm-disp-apis.so
 lib64/libsdm-disp-apis.so

@@ -234,9 +234,11 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.1-service \
+    com.android.nfc_extras \
     NfcNci \
-    Tag \
-    com.android.nfc_extras
+    SecureElement \
+    Tag
 
 # Telephony
 PRODUCT_PACKAGES += \

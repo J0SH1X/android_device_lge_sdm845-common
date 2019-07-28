@@ -127,6 +127,11 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
+# IPA
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0

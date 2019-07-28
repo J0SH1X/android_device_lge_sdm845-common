@@ -445,6 +445,15 @@ vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+# LGE Bootproperty
+vendor/bin/hw/vendor.lge.hardware.bootproperty@1.0-service
+vendor/etc/init/init.lge.bootproperty_trigger.rc
+vendor/etc/init/vendor.lge.hardware.bootproperty@1.0-service.rc
+vendor/lib64/hw/vendor.lge.hardware.bootproperty@1.0-impl.so
+vendor/lib64/vendor.lge.hardware.bootproperty@1.0.so
+vendor/lib/hw/vendor.lge.hardware.bootproperty@1.0-impl.so
+vendor/lib/vendor.lge.hardware.bootproperty@1.0.so
+
 # Perf
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so

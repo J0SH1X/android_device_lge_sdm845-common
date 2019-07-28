@@ -905,6 +905,10 @@ vendor/lib/hw/vibrator.default.so|f5578f77b423c21ccc512625015e097c306a4b92
 vendor/lib/vendor.lge.hardware.vibrator@1.0.so|9b91f2add8f94837d57949eae57499fbd02eaa7f
 vendor/lib/libpparam.so
 
+# VR
+vendor/lib64/hw/vr.sdm845.so
+vendor/lib/hw/vr.sdm845.so
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc

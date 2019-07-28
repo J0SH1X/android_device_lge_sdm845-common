@@ -153,6 +153,12 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1-service.clearkey
+
 # FM packages
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \

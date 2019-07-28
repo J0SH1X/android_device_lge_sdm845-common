@@ -324,6 +324,12 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service \
+    thermal.sdm845
+
 # Update engine
 PRODUCT_PACKAGES += \
     brillo_update_payload \

@@ -173,6 +173,21 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += qcom.fmradio
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti \
+    libgnss \
+    libgnsspps
+
+PRODUCT_PACKAGES += \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    sap.conf \
+    xtwifi.conf
+
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml

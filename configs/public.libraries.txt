@@ -1,0 +1,7 @@
+libqti-perfd-client.so
+libadsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistenjni.so
+liblistensoundmodel2.so
+libOpenCL.so

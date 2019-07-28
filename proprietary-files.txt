@@ -915,6 +915,10 @@ vendor/bin/cpfirmware
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
+# Wifi
+vendor/bin/cnss-daemon
+vendor/bin/fstman
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc

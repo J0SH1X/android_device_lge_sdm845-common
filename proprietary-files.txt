@@ -267,24 +267,29 @@ vendor/lib/vendor.lge.hardware.property@1.0.so
 
 # DPM
 etc/dpm/dpm.conf
-etc/dpm/nsrm/NsrmConfiguration.xml
+#etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar
 framework/dpmapi.jar
 framework/tcmclient.jar
 lib/com.qualcomm.qti.dpm.api@1.0.so
+lib/libdiag_system.so
 lib/libdpmtcm.so
-lib/libdpmnsrm.so
 lib/libdpmctmgr.so
 lib/libdpmfdmgr.so
 lib/libdpmframework.so
 lib64/com.qualcomm.qti.dpm.api@1.0.so
+lib64/libdiag_system.so
 lib64/libdpmtcm.so
-lib64/libdpmnsrm.so
 lib64/libdpmctmgr.so
 lib64/libdpmfdmgr.so
 lib64/libdpmframework.so
+vendor/bin/dpmQmiMgr
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib64/libdpmqmihal.so
+vendor/lib/com.qualcomm.qti.dpm.api@1.0.so
+vendor/lib/libdpmqmihal.so
 
 # HotwordEnrollment
 -priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk

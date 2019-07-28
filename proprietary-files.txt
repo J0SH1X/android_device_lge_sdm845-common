@@ -909,6 +909,12 @@ vendor/lib/libpparam.so
 vendor/lib64/hw/vr.sdm845.so
 vendor/lib/hw/vr.sdm845.so
 
+# Widevine DRM
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/bin/cpfirmware
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/lib64/libwvhidl.so
+
 # WiFi Display
 bin/wfdservice
 etc/init/wfdservice.rc

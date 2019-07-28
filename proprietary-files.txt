@@ -80,6 +80,15 @@ lib/libaptX_encoder.so
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
 
+# CDSP
+vendor/bin/cdsprpcd
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libsdsprpc.so
+vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libsdsprpc.so
+
 # CNE
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml

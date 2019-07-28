@@ -870,6 +870,12 @@ vendor/lib/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libsubsystem_control.so
 
+# Time services
+-vendor/app/TimeService/TimeService.apk
+vendor/bin/time_daemon
+vendor/lib64/libtime_genoff.so
+vendor/lib/libtime_genoff.so
+
 # Telephony
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/qcrilhook.xml

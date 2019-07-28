@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,10 @@
 
 set -e
 
-export INITIAL_COPYRIGHT_YEAR=2019
+DEVICE=sdm845-common
+VENDOR=lge
+
+INITIAL_COPYRIGHT_YEAR=2019
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -33,24 +36,16 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
-# Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
-
-# Copyright headers and common guards
-write_headers "judyln judypn"
-
-write_makefiles "$MY_DIR"/proprietary-files.txt true
-
-# We are done with common
-write_footers
-
-# Reinitialize the helper for device
+# Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 # Copyright headers and guards
 write_headers
 
-write_makefiles "$MY_DIR/../$DEVICE/proprietary-files.txt" true
+write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-# We are done with device
+cat << EOF >> "$ANDROIDMK"
+EOF
+
+# Finish
 write_footers

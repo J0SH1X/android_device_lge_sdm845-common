@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,9 @@
 
 set -e
 
+DEVICE=sdm845-common
+VENDOR=lge
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
@@ -31,35 +34,27 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
-# Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
-
 while [ "$1" != "" ]; do
     case $1 in
         -n | --no-cleanup )     CLEAN_VENDOR=false
                                 ;;
         -s | --section )        shift
-                                SECTION="$1"
+                                SECTION=$1
                                 CLEAN_VENDOR=false
                                 ;;
-        * )                     SRC="$1"
+        * )                     SRC=$1
                                 ;;
     esac
     shift
 done
 
 if [ -z "$SRC" ]; then
-    SRC=/home/markus/V40/system/
+    SRC=/home/markus/ssd_home/V405EBW20a/system
 fi
 
-# Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true $CLEAN_VENDOR
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
-
-# Reinitialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false $CLEAN_VENDOR
-
-extract "$MY_DIR/../$DEVICE/proprietary-files.txt" "$SRC" "$SECTION"
 
 "$MY_DIR"/setup-makefiles.sh

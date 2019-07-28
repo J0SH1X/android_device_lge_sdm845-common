@@ -109,8 +109,19 @@ TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
 
 # Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    bootctrl.sdm845 \
+
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.sdm845 \
+    libcutils \
+    libgptutils \
+    libz
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -167,12 +178,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils \
-    libz
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client

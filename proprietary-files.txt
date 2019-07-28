@@ -882,16 +882,6 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 
-# Telephony
--app/QtiTelephonyService/QtiTelephonyService.apk
-etc/permissions/qcrilhook.xml
-etc/permissions/qti_permissions.xml
-etc/permissions/telephonyservice.xml
-etc/sysconfig/qti_whitelist.xml
-framework/qcrilhook.jar
-framework/QtiTelephonyServicelibrary.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-
 # Vibrator
 vendor/bin/immvibed|1dc0ad4637dbdbd5718093791cb6312babcd817c
 vendor/bin/hw/vendor.lge.hardware.vibrator@1.0-service-immersion|5760a3edebeeb1309959d15435bfefa4850c5c09

@@ -554,6 +554,11 @@ vendor/lib/libgcs.so
 vendor/lib/libsmwrapper.so
 vendor/lib/libmulawdec.so
 
+# Neural Networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti
+vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc
+vendor/lib64/libhexagon_nn_stub.so
+
 # Perf
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so

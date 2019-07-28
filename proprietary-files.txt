@@ -536,6 +536,24 @@ vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
 
+# Listen
+vendor/lib64/hw/sound_trigger.primary.sdm845.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
+vendor/lib64/libgcs-calwrapper.so
+vendor/lib64/libgcs-ipc.so
+vendor/lib64/libgcs-osal.so
+vendor/lib64/libgcs.so
+vendor/lib64/libmulawdec.so
+vendor/lib/hw/sound_trigger.primary.sdm845.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libgcs-calwrapper.so
+vendor/lib/libgcs-ipc.so
+vendor/lib/libgcs-osal.so
+vendor/lib/libgcs.so
+vendor/lib/libsmwrapper.so
+vendor/lib/libmulawdec.so
+
 # Perf
 lib64/vendor.qti.hardware.iop@1.0.so
 lib64/vendor.qti.hardware.iop@2.0.so

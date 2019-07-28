@@ -17,10 +17,6 @@ vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 
 # Audio
 vendor/lib64/hw/audio.primary.sdm845.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -33,11 +29,6 @@ vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress_vendor.so
 vendor/lib/hw/audio.primary.sdm845.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
@@ -50,6 +41,19 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libcsd-client.so
 vendor/lib/libqtigef.so
 vendor/lib/libtinycompress_vendor.so
+
+# Audio FX modules
+etc/permissions/audiosphere.xml
+framework/audiosphere.jar
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libshoebox.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
 
 # Bluetooth (aptX)
 lib/libaptX_encoder.so

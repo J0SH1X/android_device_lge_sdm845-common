@@ -86,6 +86,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # FM Radio
 BOARD_HAS_QCA_FM_SOC := cherokee
 BOARD_HAVE_QCOM_FM := true

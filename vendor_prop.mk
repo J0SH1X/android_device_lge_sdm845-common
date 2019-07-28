@@ -63,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=560
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \

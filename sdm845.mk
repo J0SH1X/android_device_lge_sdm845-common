@@ -240,6 +240,18 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext

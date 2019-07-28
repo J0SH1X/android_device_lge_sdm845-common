@@ -1,3 +1,12 @@
+# ADSP
+vendor/bin/adsprpcd
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libfastcvopt.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/libfastcvopt.so
+
 # ANT+
 lib64/com.qualcomm.qti.ant@1.0.so
 lib/com.qualcomm.qti.ant@1.0.so

@@ -102,7 +102,10 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    Snap \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # DAC
 PRODUCT_PACKAGES += \

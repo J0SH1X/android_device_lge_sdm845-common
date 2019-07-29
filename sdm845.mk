@@ -63,10 +63,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
-# ANT+
-#PRODUCT_PACKAGES += \
-#    AntHalService
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \

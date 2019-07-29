@@ -93,8 +93,6 @@ vendor/lib/libsdsprpc.so
 vendor/bin/hvdcp_opti
 
 # CNE
-#etc/cne/andsfCne.xml
-#etc/cne/SwimConfig.xml
 etc/permissions/cneapiclient.xml
 etc/permissions/com.quicinc.cne.xml
 framework/cneapiclient.jar
@@ -267,7 +265,6 @@ vendor/lib/vendor.lge.hardware.property@1.0.so
 
 # DPM
 etc/dpm/dpm.conf
-#etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
 framework/com.qti.dpmframework.jar

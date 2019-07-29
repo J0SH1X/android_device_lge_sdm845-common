@@ -115,14 +115,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config.extra=none
 
-# Vibration
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    ro.immvibed.fakeandrvers=8
-
-# VNDK
-#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#    ro.vndk.version=28
-
 # Voice assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true

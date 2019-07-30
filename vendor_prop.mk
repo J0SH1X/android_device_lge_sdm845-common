@@ -37,15 +37,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio - DAC
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.hifi_adv_support=1 \
-    ro.config.hifi_enhance_support=1 \
-    audio.hifi_rec.normal_gain=0 \
-    audio.hifi_rec.normal_lcf=75 \
-    audio.hifi_rec.normal_lmt=0 \
-    audio.hifi_rec.concert_gain=-140 \
-    audio.hifi_rec.concert_lcf=0 \
-    audio.hifi_rec.concert_lmt=0 \
-    audio.hifi_rec.offset_gain=39
+    persist.vendor.lge.audio.hifi_adv_support=1 \
+    ro.vendor.lge.config.hifi_enhance_support=1 \
+    vendor.lge.audio.hifi_rec.normal_gain=0 \
+    vendor.lge.audio.hifi_rec.normal_lcf=75 \
+    vendor.lge.audio.hifi_rec.normal_lmt=0 \
+    vendor.lge.audio.hifi_rec.concert_gain=-140 \
+    vendor.lge.audio.hifi_rec.concert_lcf=0 \
+    vendor.lge.audio.hifi_rec.concert_lmt=0 \
+    vendor.lge.audio.hifi_rec.offset_gain=39
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \

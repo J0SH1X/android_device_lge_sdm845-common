@@ -337,7 +337,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.joan
+    vendor.lineage.touch@1.0-service.judy
 
 # Trust HAL
 PRODUCT_PACKAGES += \

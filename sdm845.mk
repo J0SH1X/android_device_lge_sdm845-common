@@ -150,6 +150,10 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libvulkan
 
+# Doze
+PRODUCT_PACKAGES += \
+    LGEDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \

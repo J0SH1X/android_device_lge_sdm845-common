@@ -867,6 +867,14 @@ vendor/lib/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libsubsystem_control.so
 
+# Thermal engine
+vendor/bin/thermal-engine
+vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/etc/thermal-engine-845.conf
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-default.conf
+
 # Time services
 -vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon

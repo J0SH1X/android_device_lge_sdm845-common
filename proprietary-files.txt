@@ -871,7 +871,6 @@ vendor/lib64/libsubsystem_control.so
 vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
 vendor/lib/libthermalclient.so
-vendor/etc/thermal-engine-845.conf
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-engine-default.conf
 

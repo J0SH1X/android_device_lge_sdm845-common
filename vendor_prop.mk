@@ -1,7 +1,6 @@
 #
-# vendor props for joan
+# vendor props for lge sdm845-common
 #
-
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \

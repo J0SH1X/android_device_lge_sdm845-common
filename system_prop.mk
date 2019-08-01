@@ -1,5 +1,5 @@
 #
-# system props for sdm845-common
+# system props for lge sdm845-common
 #
 
 # Audio
@@ -28,6 +28,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=4096
+
+#Netflix custom property
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.netflix.bsp_rev=Q845-05000-1
 
 # Voice assistant
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

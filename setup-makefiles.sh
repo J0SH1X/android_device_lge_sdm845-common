@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=sdm845-common
+DEVICE_COMMON=sdm845-common
 VENDOR=lge
 
 INITIAL_COPYRIGHT_YEAR=2019
@@ -37,10 +37,10 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+setup_vendor "${DEVICE_COMMON}" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers
+write_headers "judypn judyln"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 

@@ -363,7 +363,6 @@ etc/permissions/izat.xt.srv.xml
 etc/permissions/privapp-permissions-com.qualcomm.location.xml
 -framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
--priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/lib/libpcas_vendor.so
 vendor/lib64/libpcas.so
 vendor/lib64/libpcas_vendor.so

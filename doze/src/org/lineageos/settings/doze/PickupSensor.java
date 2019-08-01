@@ -46,7 +46,7 @@ public class PickupSensor implements SensorEventListener {
     public PickupSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = Utils.getSensor(mSensorManager, "LGE PickUp Sensor");
+        mSensor = Utils.getSensor(mSensorManager, "lge.sensor.lgpick");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 

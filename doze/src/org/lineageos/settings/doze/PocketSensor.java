@@ -46,7 +46,7 @@ public class PocketSensor implements SensorEventListener {
     public PocketSensor(Context context) {
         mContext = context;
         mSensorManager = mContext.getSystemService(SensorManager.class);
-        mSensor = Utils.getSensor(mSensorManager, "LGE PocketDetection Sensor");
+        mSensor = Utils.getSensor(mSensorManager, "android.sensor.proximity");
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 

@@ -68,10 +68,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# HDR
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qcom.hdr.config=/vendor/etc/hdr_tm_config.xml
-
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml
@@ -104,8 +100,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.debug.sensors.daemon=d \
-    persist.vendor.debug.sensors.hal=d \
     persist.vendor.sensors.diag_buffer_mode=false
 
 # Sensors (Sar)

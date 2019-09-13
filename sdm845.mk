@@ -19,6 +19,12 @@ $(call inherit-product-if-exists, vendor/lge/sdm845-common/sdm845-common-vendor.
 
 COMMON_PATH := device/lge/sdm845-common
 
+# define hardware platform
+PRODUCT_PLATFORM := sdm845
+
+PRODUCT_SOONG_NAMESPACES += \
+    device/lge/sdm845-common
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \

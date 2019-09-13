@@ -16,7 +16,7 @@ vendor/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 
 # Audio
-vendor/lib64/hw/audio.primary.sdm845.so
+vendor/lib64/hw/audio.primary.sdm845.so|763bea7771cfbcdb16eb7dc6edf5583077d86bcb
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -28,7 +28,7 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress_vendor.so
-vendor/lib/hw/audio.primary.sdm845.so
+vendor/lib/hw/audio.primary.sdm845.so|cbf0724aac53e4ad7ac0d8c201ff37777f93b73d
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so

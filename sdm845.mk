@@ -186,7 +186,7 @@ PRODUCT_PACKAGES += \
 	qcom.fmradio \
 	qcom.fmradio.xml
 
-PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Gesture handler
 PRODUCT_PACKAGES += \
@@ -344,8 +344,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -398,5 +398,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon

@@ -44,7 +44,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# A/B
+# A/B support
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    cppreopts.sh \
+    update_engine \
+    update_verifier
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-service \
+    bootctrl.sdm845
+
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
@@ -60,8 +71,21 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+# Enable update engine sideloading by including the static version of the
+# boot_control HAL and its dependencies.
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.sdm845.recovery \
+    libgptutils.judy.recovery \
+    libz \
+    libcutils
+
 PRODUCT_PACKAGES += \
-    otapreopt_script
+    update_engine_sideload
+
+# The following modules are included in debuggable builds only.
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -104,21 +128,6 @@ PRODUCT_PACKAGES += \
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
-
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    bootctrl.sdm845 \
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils \
-    libz
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -346,16 +355,6 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
-
-# Update engine
-PRODUCT_PACKAGES += \
-    brillo_update_payload \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # USB
 PRODUCT_PACKAGES += \

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013,2016, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -26,7 +26,6 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 #ifndef __GPT_UTILS_H__
 #define __GPT_UTILS_H__
 #include <vector>
@@ -51,7 +50,6 @@ extern "C" {
 #define PARTITION_COUNT_OFFSET      80
 #define PENTRY_SIZE_OFFSET          84
 #define PARTITION_CRC_OFFSET        88
-
 #define TYPE_GUID_OFFSET            0
 #define TYPE_GUID_SIZE              16
 #define PTN_ENTRY_SIZE              128
@@ -61,7 +59,6 @@ extern "C" {
 #define ATTRIBUTE_FLAG_OFFSET       48
 #define PARTITION_NAME_OFFSET       56
 #define MAX_GPT_NAME_SIZE           72
-
 /******************************************************************************
  * AB RELATED DEFINES
  ******************************************************************************/
@@ -79,11 +76,12 @@ extern "C" {
 #define AB_SLOT_A_SUFFIX                "_a"
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
-#define PTN_XBL_CFG                     "xbl_config"
-#define PTN_SWAP_LIST                   PTN_XBL, PTN_XBL_CFG, "sbl1", "rpm", "tz", "aboot", "abl", "hyp", "lksecapp", "keymaster", "cmnlib", "cmnlib32", "cmnlib64", "pmic", "apdp", "devcfg", "hosd", "keystore", "msadp", "mdtp", "mdtpsecapp", "dsp", "aop", "qupfw", "vbmeta", "dtbo", "ImageFv"
-#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "modem", "bluetooth"
+#define PTN_SWAP_LIST                   PTN_XBL, \
+            "abl", "aop", "apdp", "cmnlib", "cmnlib64", \
+            "devcfg", "dtbo", "hyp", "keymaster", "msadp", \
+            "qupfw", "storsec", "tz", "vbmeta", "vbmeta_system", "xbl_config"
+#define AB_PTN_LIST PTN_SWAP_LIST, "boot", "system", "vendor", "modem", "system_ext", "product"
 #define BOOT_DEV_DIR    "/dev/block/bootdevice/by-name"
-
 /******************************************************************************
  * HELPER MACROS
  ******************************************************************************/
@@ -96,17 +94,14 @@ enum boot_update_stage {
 	UPDATE_BACKUP,
 	UPDATE_FINALIZE
 };
-
 enum gpt_instance {
 	PRIMARY_GPT = 0,
 	SECONDARY_GPT
 };
-
 enum boot_chain {
 	NORMAL_BOOT = 0,
 	BACKUP_BOOT
 };
-
 struct gpt_disk {
 	//GPT primary header
 	uint8_t *hdr;
@@ -134,7 +129,6 @@ struct gpt_disk {
 	uint32_t block_size;
 	uint32_t is_initialized;
 };
-
 /******************************************************************************
  * FUNCTION PROTOTYPES
  ******************************************************************************/
@@ -146,21 +140,16 @@ void gpt_disk_free(struct gpt_disk *disk);
 //Get the details of the disk holding the partition whose name
 //is passed in via dev
 int gpt_disk_get_disk_info(const char *dev, struct gpt_disk *disk);
-
 //Get pointer to partition entry from a allocated gpt_disk structure
 uint8_t* gpt_disk_get_pentry(struct gpt_disk *disk,
 		const char *partname,
 		enum gpt_instance instance);
-
 //Update the crc fields of the modified disk structure
 int gpt_disk_update_crc(struct gpt_disk *disk);
-
 //Write the contents of struct gpt_disk back to the actual disk
 int gpt_disk_commit(struct gpt_disk *disk);
-
 //Return if the current device is UFS based or not
 int gpt_utils_is_ufs_device();
-
 //Swtich betwieen using either the primary or the backup
 //boot LUN for boot. This is required since UFS boot partitions
 //cannot have a backup GPT which is what we use for failsafe
@@ -179,12 +168,11 @@ int gpt_utils_is_ufs_device();
 //- Once we locate sgY we call the query ioctl on /dev/sgy to switch
 //the boot lun to either LUNA or LUNB
 int gpt_utils_set_xbl_boot_partition(enum boot_chain chain);
-
 //Given a vector of partition names as a input and a reference to a map,
 //populate the map to indicate which physical disk each of the partitions
 //sits on. The key in the map is the path to the block device where the
-//partiton lies and the value is a vector of strings indicating which of
-//the passed in partiton names sits on that device.
+//partition lies and the value is a vector of strings indicating which of
+//the passed in partition names sits on that device.
 int gpt_utils_get_partition_map(std::vector<std::string>& partition_list,
                 std::map<std::string,std::vector<std::string>>& partition_map);
 #ifdef __cplusplus

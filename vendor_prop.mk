@@ -116,6 +116,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
 
+# Vibration
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.haxed.android.release=9
+
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0

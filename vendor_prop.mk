@@ -6,7 +6,7 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
-    audio.offload.video=false \
+    audio.offload.video=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
@@ -49,6 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.chip.vendor=qcom \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
     vendor.qcom.bluetooth.soc=cherokee \
     vendor.bluetooth.soc=cherokee \
@@ -56,13 +57,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.expose.aux=1
+    persist.camera.expose.aux=1 \
+    camera.disable_zsl_mode=true \
+    
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=560
+    ro.sf.lcd_density=560 \
+    ro.vendor.display.cabl=0 \
+    vendor.display.enable_default_color_mode=1 \
+    debug.egl.hw=0 \
+    debug.sf.hw=0 \
+    debug.sf.latch_unsignaled=1 \
+    persist.demo.hdmirotationlock=false \
+    persist.sys.sf.native_mode=0 
+
+# DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -78,7 +92,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -112,13 +127,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config.extra=none
 
-# Voice assistant
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opa.eligible_device=true
-
 # Vibration
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.haxed.android.release=9
+
+# Voice assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \

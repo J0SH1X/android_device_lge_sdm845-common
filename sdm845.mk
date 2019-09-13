@@ -36,6 +36,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 -include $(COMMON_PATH)/system_prop.mk
 -include $(COMMON_PATH)/vendor_prop.mk
 
+	
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi

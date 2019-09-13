@@ -24,8 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \
 #    $(COMMON_PATH)/overlay-lineage
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Properties
 -include $(COMMON_PATH)/system_prop.mk

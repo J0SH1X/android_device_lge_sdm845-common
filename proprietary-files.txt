@@ -849,19 +849,6 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 
-# Vibrator
-#vendor/bin/immvibed|2402ff8e933e4b3815072a1d6bf23c3f5ec24529
-#vendor/bin/hw/vendor.lge.hardware.vibrator@1.0-service-immersion|5760a3edebeeb1309959d15435bfefa4850c5c09
-#vendor/etc/init/vendor.lge.hardware.vibrator@1.0-service-immersion.rc|84897a5ac2ea07f91ce26f1d5e843a6c74f97c7e
-#vendor/lib64/hw/vendor.lge.hardware.vibrator@1.0-impl-immersion.so|ed73d863ffdb2f97920ddc6eff17612e9b62668e
-#vendor/lib64/hw/vibrator.default.so|d131e79c508a291f00c9381724df56ad05d3a94a
-#vendor/lib64/vendor.lge.hardware.vibrator@1.0.so|9fd889a9d486a6a45f00c7b22f0c74a0ce86da31
-#vendor/lib64/libpparam.so
-#vendor/lib/hw/vendor.lge.hardware.vibrator@1.0-impl-immersion.so|6b62990c27fbd139da4db606cf1eb7a6cd654577
-#vendor/lib/hw/vibrator.default.so|f5578f77b423c21ccc512625015e097c306a4b92
-#vendor/lib/vendor.lge.hardware.vibrator@1.0.so|9b91f2add8f94837d57949eae57499fbd02eaa7f
-#vendor/lib/libpparam.so
-
 # VR
 vendor/lib64/hw/vr.sdm845.so
 vendor/lib/hw/vr.sdm845.so

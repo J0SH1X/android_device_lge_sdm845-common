@@ -36,7 +36,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(COMMON_PATH)/overlay-lineage/lineage-
 # Properties
 -include $(COMMON_PATH)/system_prop.mk
 -include $(COMMON_PATH)/vendor_prop.mk
-
+-include frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk
 	
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 

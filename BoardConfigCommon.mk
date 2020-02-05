@@ -68,9 +68,6 @@ USE_CAMERA_STUB := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)

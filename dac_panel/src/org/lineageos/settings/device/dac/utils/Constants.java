@@ -36,10 +36,10 @@ public class Constants {
     public static final String PROPERTY_HIFI_DAC_AVC_VOLUME = "persist.vendor.lge.audio.hifi_dac.avc_volume";
     public static final String PROPERTY_HIFI_DAC_MASTER_VOLUME = "persist.vendor.lge.audio.hifi_dac.master_volume";
 
-    public static final String HEADSET_TYPE_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-4/4-0048/headset_type";
-    public static final String AVC_VOLUME_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-4/4-0048/avc_volume";
-    public static final String MASTER_VOLUME_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-4/4-0048/master_volume";
-    public static final String ESS_FILTER_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-4/4-0048/ess_filter";
+    public static final String HEADSET_TYPE_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/headset_type";
+    public static final String AVC_VOLUME_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/avc_volume";
+    public static final String MASTER_VOLUME_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/master_volume";
+    public static final String ESS_FILTER_SYSFS = "/sys/devices/platform/soc/a90000.i2c/i2c-3/3-0048/ess_filter";
 
     public static final HashMap<Double, Integer> balanceHashMap = new HashMap<>();
     public static final HashMap<Integer, Double> balanceHashMapReverse = new HashMap<>();

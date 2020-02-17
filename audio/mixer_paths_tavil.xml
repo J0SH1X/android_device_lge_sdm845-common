@@ -2003,7 +2003,12 @@
     </path>
 
     <path name="handset">
-	    <ctl name="SPK Profile" value="rcvcall" />
+        <ctl name="SLIM RX0 MUX" value="AIF1_PB" />
+        <ctl name="CDC_IF RX0 MUX" value="SLIM RX0" />
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR PA Gain" value="G_6_DB" />
     </path>
 
     <path name="handset-mic">
@@ -3759,7 +3764,8 @@
 
     <path name="loopback-earpiece">
         <path name="handset" />
-        <ctl name="SPK Profile" value="rcvbypass" />
+        <ctl name="RX0 Digital Volume" value="84" />
+        <ctl name="EAR PA Gain" value="G_6_DB" />
     </path>
 
     <path name="loopback-speaker">
@@ -3779,7 +3785,13 @@
     </path>
 
     <path name="voip-earpiece">
-        <path name="handset" />
+        <ctl name="SLIM RX0 MUX" value="AIF1_PB" />
+        <ctl name="CDC_IF RX0 MUX" value="SLIM RX0" />
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="RX0 Digital Volume" value="84" />
+        <ctl name="EAR PA Gain" value="G_6_DB" />
     </path>
 
     <path name="voip-speaker">

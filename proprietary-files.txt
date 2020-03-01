@@ -859,8 +859,62 @@ vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/lib64/libwvhidl.so
 
 # Wifi
+vendor/bin/hw/wlan_ril
 vendor/bin/cnss-daemon
 vendor/bin/fstman
+vendor/bin/hw/vendor.lge.hardware.wifi.hal@1.0-service
+vendor/etc/init/android.hardware.wifi@1.0-service.rc
+vendor/etc/init/vendor.lge.hardware.wifi.hal@1.0-service.rc
+vendor/lib64/libdiagd_client_qca.so
+vendor/lib64/libril_wrapper.so
+vendor/lib64/libwfcu.so
+vendor/lib64/vendor.lge.hardware.wifi.hal@1.0.so
+vendor/lib64/vendor.lge.hardware.wifi.hostapd@1.0.so
+vendor/lib64/vendor.lge.hardware.wifi.supplicant@1.0.so
+vendor/lib64/vendor.lge.hardware.wifi.supplicant@2.0.so
+
+# Wifi - Configs
+vendor/etc/wifi/p2p_supplicant.conf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/PerProviderSubscription.conf
+vendor/etc/wifi/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/wifi_concurrency_cfg.txt
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+
+# Wifi - Wigig
+product/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
+product/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
+product/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
+vendor/bin/wigighalsvc
+vendor/bin/wigignpt
+vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
+vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
+vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
+
+# Wifi - Wigig - Configs
+vendor/etc/wifi/wigig_p2p_supplicant.conf
+vendor/etc/wifi/wigig_supplicant.conf
+
+# Wifi - Firmware
+vendor/etc/wifi/aoa_cldb_falcon.bin
+vendor/etc/wifi/aoa_cldb_swl14.bin
+vendor/etc/wifi/bdwlan.bin
+vendor/etc/wifi/bdwlan_ch0.bin
+vendor/etc/wifi/bdwlan_ch1.bin
+vendor/etc/wifi/fstman.ini
+vendor/etc/wifi/GLOBAL/bdwlan.bin
+vendor/etc/wifi/GLOBAL/bdwlan_ch0.bin
+vendor/etc/wifi/GLOBAL/bdwlan_ch1.bin
+vendor/etc/wifi/KR_ALL/bdwlan.bin
+vendor/etc/wifi/KR_ALL/bdwlan_ch0.bin
+vendor/etc/wifi/KR_ALL/bdwlan_ch1.bin
+vendor/etc/wifi/NA_CDMA/bdwlan.bin
+vendor/etc/wifi/NA_CDMA/bdwlan_ch0.bin
+vendor/etc/wifi/NA_CDMA/bdwlan_ch1.bin
+vendor/etc/wifi/NA_GSM/bdwlan.bin
+vendor/etc/wifi/NA_GSM/bdwlan_ch0.bin
+vendor/etc/wifi/NA_GSM/bdwlan_ch1.bin
 
 # WiFi Display
 bin/wfdservice

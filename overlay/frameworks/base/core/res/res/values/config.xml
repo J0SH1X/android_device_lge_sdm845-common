@@ -343,8 +343,8 @@
     <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
+         in hardware. DISABLED ON G7 FOR PERSONAL REASONS WE USE MAC FILTER AND WITH THIS ENABLED I CANT CONNECT TO WIFI -->
+    <bool name="config_setColorTransformAccelerated">false</bool>
 
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be

@@ -346,7 +346,7 @@
     <bool name="config_supportDoubleTapWake">true</bool>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. DISABLED ON G7 FOR PERSONAL REASONS WE USE MAC FILTER AND WITH THIS ENABLED I CANT CONNECT TO WIFI -->
+         in hardware.-->
     <bool name="config_setColorTransformAccelerated">false</bool>
 
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
@@ -354,8 +354,9 @@
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
-    <!-- True if the firmware supports connected MAC randomization -->
-    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+    <!-- True if the firmware supports connected MAC randomization
+       DISABLE FOR G7 BECAUSE OF PERSONSAL REASONS I USE A MAC FILTER -->
+    <bool name="config_wifi_connected_mac_randomization_supported">false</bool>
 
     <!-- True if the firmware supports Wi-Fi link probing -->
     <bool name="config_wifi_link_probing_supported">true</bool>

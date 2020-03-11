@@ -66,15 +66,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.chip.vendor=qcom \
     persist.bluetooth.bluetooth_audio_hal.disabled=true \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    vendor.qcom.bluetooth.soc=cherokee \
-    vendor.bluetooth.soc=cherokee \
-    qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.expose.aux=1 \
-    camera.disable_zsl_mode=true \
-    
+    camera.disable_zsl_mode=true
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -141,10 +138,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config.extra=none
-
-# Vibration
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.haxed.android.release=9
 
 # Voice assistant
 PRODUCT_PROPERTY_OVERRIDES += \

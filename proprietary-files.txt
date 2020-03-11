@@ -860,7 +860,15 @@ vendor/lib64/libwvhidl.so
 
 # Wifi
 vendor/bin/cnss-daemon
-vendor/bin/fstman
+
+# Wigig
+vendor/bin/wigighalsvc
+vendor/bin/wigignpt
+vendor/etc/wifi/wigig_p2p_supplicant.conf
+vendor/etc/wifi/wigig_supplicant.conf
+vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
+vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
+vendor/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
 
 # WiFi Display
 bin/wfdservice

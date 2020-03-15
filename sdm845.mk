@@ -386,8 +386,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf \
-    libwifi-hal-ctrl \
-    wifi-mac-generator
+    libwifi-hal-ctrl
 
 # WiFi Display
 PRODUCT_PACKAGES += \

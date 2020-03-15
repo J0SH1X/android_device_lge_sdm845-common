@@ -132,8 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    libbt-vendor
+    android.hardware.bluetooth@1.0
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
@@ -386,7 +385,9 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     libwpa_client \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    libwifi-hal-ctrl \
+    wifi-mac-generator
 
 # WiFi Display
 PRODUCT_PACKAGES += \

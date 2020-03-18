@@ -23,7 +23,7 @@
 #include <mutex>
 #include <fstream>
 
-#define BL              "/sys/class/backlight/panel0-backlight/"
+#define BL              "/sys/class/leds/wled/"
 
 #define BL_EX           "/sys/class/backlight/panel0-backlight-ex/"
 

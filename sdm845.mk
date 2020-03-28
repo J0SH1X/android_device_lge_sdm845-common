@@ -366,8 +366,8 @@ PRODUCT_PACKAGES += \
     thermal.sdm845
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.judy
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.touch@1.0-service.judy
 
 # Trust HAL
 PRODUCT_PACKAGES += \

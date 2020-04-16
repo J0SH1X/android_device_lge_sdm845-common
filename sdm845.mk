@@ -381,7 +381,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.2-service.judy
+    android.hardware.vibrator@1.2-service.lge
 
 # VR
 PRODUCT_PACKAGES += \

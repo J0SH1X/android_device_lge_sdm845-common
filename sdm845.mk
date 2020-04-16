@@ -153,7 +153,8 @@ PRODUCT_PACKAGES += \
 
 # DAC
 PRODUCT_PACKAGES += \
-    QuadDACPanel
+    QuadDACPanel \
+    lge.hardware.audio.dac.control@1.0-service
 
 # Display
 PRODUCT_PACKAGES += \

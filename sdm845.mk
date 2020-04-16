@@ -34,8 +34,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(COMMON_PATH)/overlay-lineage/lineage-sdk
 
 # Properties
--include $(COMMON_PATH)/system_prop.mk
--include $(COMMON_PATH)/vendor_prop.mk
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 -include frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk
 	
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true

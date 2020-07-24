@@ -107,12 +107,12 @@ void init_target_properties()
 
     if(isGlobal)
     {
-        property_set("ro.product.name", "judypn_lao_eea");
-        property_set("ro.product.vendor.name", "judypn_lao_eea");
+        property_set("ro.product.name", "judyln_lao_eea");
+        property_set("ro.product.vendor.name", "judyln_lao_eea");
     } else 
     {
-        property_set("ro.product.name", "judypn_lao_com");
-        property_set("ro.product.vendor.name", "judypn_lao_com");
+        property_set("ro.product.name", "judyln_lao_com");
+        property_set("ro.product.vendor.name", "judyln_lao_com");
     }
 
     property_set("ro.product.model", device);

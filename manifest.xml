@@ -765,23 +765,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.lineage.livedisplay</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IDisplayModes</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IPictureAdjustment</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IColorEnhancement</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.lineage.trust</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -796,19 +779,6 @@
         <version>1.0</version>
         <interface>
             <name>ITouchscreenGesture</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lge.hardware.audio.dac.control</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDacAdvancedControl</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IDacHalControl</name>
             <instance>default</instance>
         </interface>
     </hal>

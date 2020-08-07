@@ -148,12 +148,16 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
+
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 #BUILD_WITHOUT_VENDOR := true
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true

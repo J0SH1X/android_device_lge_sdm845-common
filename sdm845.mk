@@ -289,6 +289,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0 \
     android.hardware.nfc@1.1 \
     android.hardware.nfc@1.2 \
+    android.hardware.nfc@1.2-service \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.1 \
     com.android.nfc_extras \

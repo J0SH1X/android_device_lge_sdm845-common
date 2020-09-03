@@ -127,13 +127,10 @@
         <item>wifi_p2p,13,1,0,-1,true</item>
         <item>mobile_ia,14,0,2,-1,true</item>
         <item>mobile_emergency,15,0,2,-1,true</item>
-        <item>mobile_vzwapp,19,0,2,60000,true</item>
-        <item>mobile_rcs,22,0,0,-1,true</item>
+        <item>mobile_vzwapp,22,0,2,60000,true</item>
         <item>mobile_xcap,23,0,2,-1,true</item>
         <item>mobile_admin,24,0,2,60000,true</item>
-        <item>mobile_wap,26,0,2,60000,true</item>
         <item>mobile_bip,27,0,2,60000,true</item>
-        <item>mobile_vtims,28,0,2,-1,true</item>
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
@@ -255,6 +252,7 @@
          If no value is found for the rat-name in use, the system default will be applied.
     -->
     <string-array name="config_mobile_tcp_buffers">
+        <item>5gnr:2097152,6291456,16777216,512000,2097152,8388608</item>
         <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
         <item>lte_ca:4096,6291456,12582912,4096,1048576,2097152</item>
         <item>umts:4094,87380,1220608,4096,16384,1220608</item>

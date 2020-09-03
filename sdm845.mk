@@ -100,15 +100,28 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@2.0-service \
-    android.hardware.audio@4.0-impl \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.common@2.0-util \
+    android.hardware.audio.common@5.0-util \
     android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@4.0-impl \
-    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    audio.a2dp.default \
+    audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
+    libaudio-resampler \
+    libaudioroute \
+    libhdmiedid \
+    libhfp \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libvolumelistener \
+    tinymix \
+    libtinycompress \
+    libtinycompress.vendor
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
@@ -157,7 +170,7 @@ PRODUCT_PACKAGES += \
 # DAC
 PRODUCT_PACKAGES += \
     QuadDACPanel \
-    lge.hardware.audio.dac.control@1.0-service
+    vendor.lge.hardware.audio.dac.control@1.0-service
 
 # Display
 PRODUCT_PACKAGES += \
@@ -170,7 +183,7 @@ PRODUCT_PACKAGES += \
     gralloc.sdm845 \
     hwcomposer.sdm845 \
     memtrack.sdm845 \
-    vendor.display.config@1.7 \
+    vendor.display.config@1.9 \
     libtinyxml \
     libvulkan
 
@@ -204,12 +217,6 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti \
-    libgnss \
-    libgnsspps
-
-PRODUCT_PACKAGES += \
     flp.conf \
     gps.conf \
     izat.conf \
@@ -231,17 +238,17 @@ PRODUCT_PACKAGES += \
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
+    $(LOCAL_PATH)/permissions/product_privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/ueventd.judypn.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+    $(COMMON_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
-$(foreach f,$(wildcard $(DEVICE_PATH)/rootdir/etc/init/hw/*.rc),\
+$(foreach f,$(wildcard $(COMMON_PATH)/rootdir/etc/init/hw/*.rc),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
-$(foreach f,$(wildcard $(DEVICE_PATH)/rootdir/etc/init/*.rc),\
+$(foreach f,$(wildcard $(COMMON_PATH)/rootdir/etc/init/*.rc),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/$(notdir $f)))
-$(foreach f,$(wildcard $(DEVICE_PATH)/rootdir/bin/*.sh),\
+$(foreach f,$(wildcard $(COMMON_PATH)/rootdir/bin/*.sh),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/bin/$(notdir $f)))
 
 # IPA
@@ -279,15 +286,22 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.1-service \
+    android.hardware.nfc@1.0 \
+    android.hardware.nfc@1.1 \
+    android.hardware.nfc@1.2 \
+    android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.1 \
     com.android.nfc_extras \
     NfcNci \
     SecureElement \
-    Tag
+    Tag \
+    vendor.nxp.nxpnfc@1.0
 
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -296,6 +310,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libOmxVidcCommon \
     libstagefrighthw
 
 # Permissions
@@ -334,18 +349,21 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service \
-    power.sdm845
+    android.hardware.power@1.2-service-qti
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor
+
 # QTI
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     $(COMMON_PATH)/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    $(COMMON_PATH)/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_libpermissions.xml
+    $(COMMON_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -358,13 +376,30 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.2 \
+    libprotobuf-cpp-full \
+    librmnetctl \
+    libxml2
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
 # Telephony
 PRODUCT_PACKAGES += \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -392,6 +427,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     android.hardware.usb.gadget@1.0
+
+# Vendor libstdc++
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
 
 # Vibrator
 PRODUCT_PACKAGES += \

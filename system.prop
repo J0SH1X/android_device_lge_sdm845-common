@@ -5,11 +5,21 @@
 # Audio
 audio.deep_buffer.media=true
 
+# CoreSight STM
+persist.debug.coresight.config=stm-events
+
 #Netflix custom property
 ro.netflix.bsp_rev=Q845-05000-1
 
+# NFC
+ro.nfc.port=I2C
+
 # Radio
+DEVICE_PROVISIONED=1
 persist.sys.fflag.override.settings_network_and_internet_v2=true
+persist.vendor.data.mode=concurrent
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=9
 
 # SurfaceFlinger
 ro.surface_flinger.protected_contents=true
@@ -30,3 +40,10 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # Voice assistant
 ro.opa.eligible_device=true
+
+#Wifi
+config.disable_rtt=true
+
+# Wifi Display
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0

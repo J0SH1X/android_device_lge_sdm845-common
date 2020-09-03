@@ -92,8 +92,8 @@ $(RFS_MDM_CDSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MDM CDSP folder structure: $@"
 	@rm -rf $@
 	@mkdir -p $(dir $@)/readonly
-	$(hide) ln -sf /data/vendor/tombstones/rfs/lpass $@/ramdumps
-	$(hide) ln -sf /mnt/vendor/persist/rfs/mdm/adsp $@/readwrite
+	$(hide) ln -sf /data/vendor/tombstones/rfs/cdsp $@/ramdumps
+	$(hide) ln -sf /mnt/vendor/persist/rfs/mdm/cdsp $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
@@ -149,8 +149,8 @@ $(RFS_MSM_CDSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM CDSP folder structure: $@"
 	@rm -rf $@/*
 	@mkdir -p $(dir $@)/readonly/vendor
-	$(hide) ln -sf /data/vendor/tombstones/rfs/lpass $@/ramdumps
-	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/adsp $@/readwrite
+	$(hide) ln -sf /data/vendor/tombstones/rfs/cdsp $@/ramdumps
+	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/cdsp $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
@@ -162,7 +162,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@/*
 	@mkdir -p $(dir $@)/readonly/vendor
 	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
-	$(hide) ln -sf /data/vendor/radio/modem_config $@/readonly/modem_config
+	$(hide) ln -sf /data/vendor/modem_config $@/readonly/modem_config
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/mpss $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
@@ -174,7 +174,7 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM SLPI folder structure: $@"
 	@rm -rf $@/*
 	@mkdir -p $(dir $@)/readonly/vendor
-	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
+	$(hide) ln -sf /data/vendor/tombstones/rfs/slpi $@/ramdumps
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/slpi $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
@@ -215,6 +215,21 @@ $(HDCPSRM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(HDCPSRM_SYMLINKS)
 # END HDCPSRM Images
+
+# IPA Images
+IPA_IMAGES := \
+    ipa_fws.b00 ipa_fws.b01 ipa_fws.b02 ipa_fws.b03 ipa_fws.b04 \
+    ipa_fws.elf ipa_fws.mdt
+
+IPA_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(IPA_IMAGES)))
+$(IPA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "IPA firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/firmware_mnt/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(IPA_SYMLINKS)
+# END IPA Images
 
 # WIDEVINE Images
 WIDEVINE_IMAGES := \

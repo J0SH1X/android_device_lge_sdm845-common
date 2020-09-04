@@ -29,6 +29,7 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <dirent.h>
 #include <fcntl.h>
 #include <fstream>
 #include <stdio.h>
@@ -52,8 +53,7 @@ using android::base::Trim;
 using android::base::GetProperty;
 using android::init::property_set;
 
-void property_override(const std::string& name, const std::string& value)
-{
+void property_override(const std::string& name, const std::string& value) {
     size_t valuelen = value.size();
 
     prop_info* pi = (prop_info*) __system_property_find(name.c_str());
@@ -69,13 +69,17 @@ void property_override(const std::string& name, const std::string& value)
     }
 }
 
-void init_target_properties()
-{
+void init_target_properties() {
     std::string model;
     std::string product_name;
     std::string cmdline;
+    std::string cust_prop_name = "cust.prop";
+    std::string default_cust_prop_path = "/oem/OP/" + cust_prop_name;
     std::string cust_prop_path;
     std::string cust_prop_line;
+    DIR *dir;
+    struct dirent *ent;
+    struct stat statBuf;
     bool unknownModel = true;
     bool dualSim = false;
 
@@ -95,7 +99,21 @@ void init_target_properties()
         }
     }
 
-    cust_prop_path = "/oem/OP/cust.prop";
+    cust_prop_path = default_cust_prop_path;
+
+    if((dir = opendir("/oem/OP/")) != NULL) {
+        while ((ent = readdir(dir)) != NULL) {
+            if(ent->d_type == DT_DIR) {
+                std::string tmp = "/oem/OP/";
+                tmp.append(ent->d_name);
+                tmp.append("/");
+                tmp.append(cust_prop_name);
+                if(stat(tmp.c_str(), &statBuf) == 0)
+                    cust_prop_path = tmp;
+            }
+        }
+        closedir (dir);
+    }
     std::ifstream cust_prop_stream(cust_prop_path, std::ifstream::in);
 
     while(std::getline(cust_prop_stream, cust_prop_line)) {

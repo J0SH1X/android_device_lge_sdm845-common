@@ -16,32 +16,55 @@
 
 #define LOG_TAG "TouchscreenGestureService"
 
-#include <unordered_map>
+#include <fstream>
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
+#include <cutils/properties.h>
 
 #include "TouchscreenGesture.h"
-
-namespace {
-typedef struct {
-    int32_t keycode;
-    const char* name;
-} GestureInfo;
-
-const std::unordered_map<int32_t, GestureInfo> kGestureInfoMap = {
-    {0, {249, "Swipe Up"}},
-    {1, {250, "Swipe Down"}},
-    {2, {251, "Swipe Right"}},
-    {3, {252, "Swipe Left"}},
-};
-}  // anonymous namespace
 
 namespace vendor {
 namespace lineage {
 namespace touch {
 namespace V1_0 {
 namespace implementation {
+
+const std::string kGesturePath = "/sys/devices/virtual/input/lge_touch/swipe_enable";
+
+const std::map<int32_t, GestureInfo> kGestureInfoMap_judyln = {
+    {0, {249, "Swipe Left"}},
+    {1, {250, "Swipe Right"}},
+    {2, {248, "Swipe Up"}},
+    {3, {247, "Swipe Down"}},
+};
+
+const std::map<int32_t, GestureInfo> kGestureInfoMap_judypn = {
+    {0, {248, "Swipe Up"}},
+    {1, {247, "Swipe Down"}},
+    {2, {249, "Swipe Left"}},
+    {3, {250, "Swipe Right"}},
+};
+
+const std::map<int32_t, GestureInfo> kGestureInfoMap_judyp = {
+    {0, {248, "Swipe Up"}},
+    {1, {247, "Swipe Down"}},
+    {2, {250, "Swipe Right"}},
+    {3, {249, "Swipe Left"}},
+};
+
+TouchscreenGesture::TouchscreenGesture() {
+    char device[PROPERTY_VALUE_MAX];
+    property_get("ro.boot.hardware", device, "UNKNOWN");
+    
+    if(!strcmp(device, "judyln"))
+        kGestureInfoMap = kGestureInfoMap_judyln;
+    else if(!strcmp(device, "judypn"))
+        kGestureInfoMap = kGestureInfoMap_judypn;
+    else if(!strcmp(device, "judyp"))
+        kGestureInfoMap = kGestureInfoMap_judyp;
+
+}
 
 Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
     std::vector<Gesture> gestures;
@@ -55,8 +78,20 @@ Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb re
 }
 
 Return<bool> TouchscreenGesture::setGestureEnabled(
-    const ::vendor::lineage::touch::V1_0::Gesture&, bool) {
-    return true;
+    const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enable) {
+
+    std::ofstream file(kGesturePath);
+    std::map<int32_t, GestureInfo>::iterator it;
+    it = kGestureInfoMap.find(gesture.id);
+    if(it == kGestureInfoMap.end()) {
+        return false;
+    }
+
+    std::string output = std::to_string(it->first) + " " + std::to_string(enable);
+    
+    file << output;
+
+    return !file.fail();
 }
 
 }  // namespace implementation

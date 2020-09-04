@@ -1,7 +1,6 @@
 on boot
     chown system system /sys/devices/virtual/input/lge_touch/swipe_enable
     chmod 664 /sys/devices/virtual/input/lge_touch/swipe_enable
-    write /sys/devices/virtual/input/lge_touch/swipe_enable 1
 
 service touch-hal-1-0 /vendor/bin/hw/vendor.lineage.touch@1.0-service.judy
     class hal

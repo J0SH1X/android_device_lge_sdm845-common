@@ -146,6 +146,11 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
+BOARD_ROOT_EXTRA_FOLDERS := persdata oem/OP
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/eri:/eri \
+    /mnt/vendor/absolute:/persdata/absolute
+
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 

@@ -149,6 +149,9 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
+
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 

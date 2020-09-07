@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 cc_library {
-    name: "libgptutils.judy",
+    name: "libgptutils.lge_sdm845",
     vendor: true,
     recovery_available: true,
     shared_libs: [

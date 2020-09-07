@@ -84,7 +84,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # boot_control HAL and its dependencies.
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845.recovery \
-    libgptutils.judy.recovery \
+    libgptutils.lge_sdm845.recovery \
     libz \
     libcutils
 
@@ -262,7 +262,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-lge_sdm845
+    vendor.lineage.livedisplay@2.0-service.lge_sdm845
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -346,7 +346,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/permissions/privapp-permissions-judy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-judy.xml
+    $(COMMON_PATH)/permissions/privapp-permissions-lge_sdm845.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lge_sdm845.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -418,7 +418,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.judy
+    vendor.lineage.touch@1.0-service.lge_sdm845
 
 # Trust HAL
 PRODUCT_PACKAGES += \

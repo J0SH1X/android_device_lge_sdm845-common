@@ -22,5 +22,5 @@ cc_library {
     proprietary: true,
     recovery_available: true,
     defaults: ["bootctrl_hal_defaults"],
-    static_libs: ["libgptutils.judy"],
+    static_libs: ["libgptutils.lge_sdm845"],
 }

@@ -36,6 +36,7 @@ cc_defaults {
 
 cc_binary {
     name: "vendor.lineage.livedisplay@2.0-service.lge_sdm845",
+    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.lge_sdm845.xml"],
     init_rc: ["vendor.lineage.livedisplay@2.0-service.lge_sdm845.rc"],
     defaults: ["livedisplay_lge_sdm845_defaults"],
     vendor: true,

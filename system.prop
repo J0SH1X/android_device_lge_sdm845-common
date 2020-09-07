@@ -9,6 +9,7 @@ audio.offload.gapless.enabled=true
 audio.offload.video=true
 
 # Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
 
 # CoreSight STM

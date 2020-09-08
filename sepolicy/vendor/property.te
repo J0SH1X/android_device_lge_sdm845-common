@@ -1,0 +1,5 @@
+type vendor_sensors_prop, property_type;
+type vendor_lge_misc_prop, property_type;
+type vendor_qni_prop, property_type;
+type media_settings_prop, property_type;
+type vendor_wifi_version, property_type;

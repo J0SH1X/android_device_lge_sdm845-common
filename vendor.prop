@@ -107,7 +107,6 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
-persist.camera.expose.aux=1
 camera.disable_zsl_mode=true
 
 # CNE
@@ -122,7 +121,6 @@ vendor.display.enable_default_color_mode=1
 debug.egl.hw=0
 debug.sf.hw=0
 debug.sf.latch_unsignaled=1
-persist.demo.hdmirotationlock=false
 persist.sys.sf.native_mode=0 
 
 # DPM
@@ -145,7 +143,6 @@ ro.vendor.qti.sys.fw.bg_apps_limit=60
 persist.vendor.qcomsysd.enabled=1
 
 # Radio
-persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1

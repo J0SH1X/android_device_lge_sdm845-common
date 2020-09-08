@@ -1,0 +1,6 @@
+attribute hal_cvp;
+attribute hal_cvp_client;
+attribute hal_cvp_server;
+attribute hal_vss_ims;
+attribute hal_vss_ims_client;
+attribute hal_vss_ims_server;

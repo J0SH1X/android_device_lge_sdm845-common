@@ -35,6 +35,4 @@ genfscon sysfs /devices/platform/soc/5c00000.qcom,ssc/subsys5/state    u:object_
 genfscon sysfs /devices/virtual/input/lge_touch                        u:object_r:sysfs_lge_touch:s0
 
 # Veneer
-genfscon sysfs /devices/platform/vendor/vendor:lge-veneer-psy/power_supply/veneer/type          u:object_r:sysfs_veneer:s0
-genfscon sysfs /devices/platform/vendor/vendor:lge-veneer-psy/power_supply/veneer/health        u:object_r:sysfs_veneer:s0
-genfscon sysfs /devices/platform/vendor/vendor:lge-veneer-psy/power_supply/veneer/status        u:object_r:sysfs_veneer:s0
+genfscon sysfs /devices/platform/vendor/vendor:lge-veneer-psy/power_supply/veneer          u:object_r:sysfs_veneer:s0

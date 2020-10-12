@@ -8,6 +8,9 @@ audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
 audio.offload.video=true
 
+# BPF
+ro.kernel.ebpf.supported=true
+
 # Bluetooth
 ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee

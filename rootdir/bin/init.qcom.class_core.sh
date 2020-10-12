@@ -149,7 +149,7 @@ init_DMM()
 # For controlling console and shell on console on 8960 - perist.serial.enable 8960
 # On other target use default ro.debuggable property.
 #
-# to resolve avc: denied problem getprop default_prop qti_init_shell
+# to resolve avc: denied problem getprop default_prop vendor_qti_init_shell
 #serial=`getprop persist.serial.enable`
 serial=""
 dserial=`getprop ro.debuggable`

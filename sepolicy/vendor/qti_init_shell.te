@@ -1,8 +1,0 @@
-allow qti_init_shell sysfs_boot_cdsp:file rw_file_perms;
-
-allow qti_init_shell sns_file:dir rw_dir_perms;
-allow qti_init_shell sns_file:file { rw_file_perms setattr };
-
-allow qti_init_shell sysfs_leds:file setattr;
-
-get_prop(qti_init_shell, vendor_lge_misc_prop)

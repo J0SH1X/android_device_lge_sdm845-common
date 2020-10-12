@@ -15,6 +15,9 @@ ro.kernel.ebpf.supported=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
 
+# Charger
+ro.charger.enable_suspend=true
+
 # CoreSight STM
 persist.debug.coresight.config=stm-events
 

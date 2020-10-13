@@ -12,7 +12,6 @@ audio.offload.video=true
 ro.kernel.ebpf.supported=true
 
 # Bluetooth
-ro.bluetooth.library_name=libbluetooth_qti.so
 vendor.bluetooth.soc=cherokee
 
 # Charger

@@ -21,6 +21,7 @@ ro.camera.req.fmq.size                              u:object_r:camera_prop:s0
 ro.vendor.lge.aux.camera                            u:object_r:camera_prop:s0
 ro.vendor.lge.dev.fmode                             u:object_r:camera_prop:s0
 ro.vendor.lge.dev.fmode_exif                        u:object_r:camera_prop:s0
+ro.vendor.lge.logical.camera                        u:object_r:camera_prop:s0
 ro.vendor.lge.physical.camera                       u:object_r:camera_prop:s0
 vendor.lge.camera.pd_test.result                    u:object_r:camera_prop:s0
 vendor.lge.faceprint.inform.camera                  u:object_r:camera_prop:s0

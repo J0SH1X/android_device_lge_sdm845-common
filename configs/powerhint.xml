@@ -41,13 +41,13 @@
         <!-- L CPU - Cluster min freq uncapped -->
         <!-- B CPU - Cluster max freq ~1.26 GHz -->
         <!-- L CPU - Cluster max freq ~1.28 Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 342 MHz)-->
-        <!-- GPU - max pwrlevel 4 (freq 414 MHz)-->
+        <!-- GPU - min pwrlevel 4 (freq 414 MHz)-->
+        <!-- GPU - max pwrlevel 3 (freq 520 MHz)-->
         <!-- GPUBW freq uncapped -->
         <Config
             Id="0x00001206" Enable="true" Target="sdm845"
             Resources="0x40800000, 0x0, 0x40800100, 0x0, 0x40804000, 0x4F3, 0x40804100, 0x506,
-            0X42804000, 0x5, 0X42808000, 0x4, 0x42814000, 0x0"/>
+            0X42804000, 0x4, 0X42808000, 0x3, 0x42814000, 0x0"/>
         <!-- vr mode -->
         <!-- B CPU - Cluster min freq ~1.209 Ghz -->
         <!-- L CPU - Cluster min freq ~1.056 Ghz -->
@@ -257,12 +257,10 @@
         <!-- CPUBW HWMON SAMPLE MS : MPCTLV3_CPUBW_HWMON_SAMPLE_MS(0x41820000) : 0x0A (10) -->
         <!-- SILVER CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000) : 0x00 (0) -->
         <!-- GOLD CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE (0x41444100) : 0x00 (0) -->
-        <!-- SILVER CLUSTER MIN FREQ 1.420GHz : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 0x58C(1420)-->
         <!-- GPU - max pwrlevel 6 (freq 257 MHz)-->
         <Config
             Id="0x00001346" Enable="true" Timeout="3600000" Target="sdm845"
-            Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x0A, 0x41444000, 0x00, 0x41444100, 0x00, 0x40800100, 1420, 0x42808000, 0x6"/>
-
+            Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x42808000, 0x6"/>
         <!-- Front Camera FHD 30FPS Recording Mode : POWER_HINT_ID_VIDEO_ENCODE_FHD30_FRONT -->
         <!-- SCHED DOWNMIGRATE : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000) : 0x3C (60)-->
         <!-- SCHED UPMIGRATE : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000) : 0x46 (70) -->
@@ -276,7 +274,8 @@
         <!-- GPU - max pwrlevel 6 (freq 257 MHz)-->
         <Config
             Id="0x00001347" Enable="true" Timeout="3600000" Target="sdm845"
-            Resources="0x40C20000, 0x32, 0x40C1C000, 0x3C, 0x40800100, 1420, 0x40800000, 1209, 0x42808000, 0x3"/>
+	    Resources="0x43008000, 0x00, 0x4180C000, 0x00,
+            0x41820000, 0x0A, 0x41444000, 0x00, 0x41444100, 0x00, 0x40C20000, 0x32, 0x40C1C000, 0x3C, 0x40800100, 1766, 0x40800000, 1492, 0x42808000, 0x6"/>
 
         <!-- UHD 30FPS Recording Mode : POWER_HINT_ID_VIDEO_ENCODE_UHD30 -->
         <!-- LLCCBW HWMON HYST OPT : MPCTLV3_LLCBW_HWMON_HYST_OPT(0x43008000) : 0x00 (0) -->
@@ -290,7 +289,7 @@
             Id="0x00001348" Enable="true" Timeout="3600000" Target="sdm845"
             Resources="0x43008000, 0x00, 0x4180C000, 0x00, 0x41820000, 0x0A, 0x41808000, 0x50,
             0x40800100, 1324, 0x40800000, 1363, 0x43000000, 38, 0x40C20000, 30, 0x40C1C000, 40,
-            0x41444000, 0x00, 0x41444100, 0x00, 0x42808000, 0x6"/>
+            0x41444000, 0x00, 0x41444100, 0x00"/>
 
         <!-- FHD 60FPS Recording Mode : POWER_HINT_ID_VIDEO_ENCODE_FHD60 -->
         <!-- LLCCBW HWMON HYST OPT : MPCTLV3_LLCBW_HWMON_HYST_OPT(0x43008000) : 0x00 (0) -->
@@ -366,16 +365,6 @@
         <Config
             Id="0x0000134E" Enable="true" Timeout="3600000" Target="sdm845"
             Resources="0x40C20000, 0x32, 0x40C1C000, 0x3C, 0x40800100, 1420, 0x40800000, 1209, 0x42808000, 0x3"/>
-        <!-- Makeup Mode : POWER_HINT_ID_MAKEUP -->
-        <!-- LLCCBW HWMON HYST OPT : MPCTLV3_LLCBW_HWMON_HYST_OPT(0x43008000) : 0x00 (0) -->
-        <!-- CPUBW HWMON HYST OPT : MPCTLV3_CPUBW_HWMON_HYST_OPT(0x4180C000) : 0x00 (0) -->
-        <!-- CPUBW HWMON SAMPLE MS : MPCTLV3_CPUBW_HWMON_SAMPLE_MS(0x41820000) : 0x0A (10) -->
-        <!-- SILVER CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000) : 0x00 (0) -->
-        <!-- GOLD CLUSTER PREDICTIVE DCVS : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE (0x41444100) : 0x00 (0) -->
-        <!-- GPU - max pwrlevel 5 (freq 342 MHz)-->
-        <Config
-            Id="0x00001350" Enable="true" Timeout="3600000" Target="sdm845"
-            Resources="0x40C20000, 0x1E, 0x40C1C000, 0x1E, 0x40800100, 1228, 0x42808000, 0x3"/>
 
     </Powerhint>
 </HintConfigs>

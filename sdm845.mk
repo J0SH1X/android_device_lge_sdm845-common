@@ -195,11 +195,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LGEDoze
 
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.sensor.proximity=true \
+    ro.sensor.pickup=lge.sensor.lgpick
+
+# PowerStats
+PRODUCT_PACKAGES += \
+    android.hardware.power.stats@1.0-service.mock
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -378,6 +387,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(COMMON_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
+
+# QTI common
+TARGET_BOARD_PLATFORM := sdm845
+TARGET_COMMON_QTI_COMPONENTS += \
+    av \
+    bt \
+    init \
+    overlay \
+    perf \
+    usb \
+    media
 
 # RCS
 PRODUCT_PACKAGES += \

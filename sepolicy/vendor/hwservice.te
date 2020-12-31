@@ -1,2 +1,0 @@
-type hal_vss_ims_hwservice, hwservice_manager_type;
-type hal_cvp_hwservice, hwservice_manager_type;

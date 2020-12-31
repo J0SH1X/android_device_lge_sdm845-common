@@ -1,4 +1,0 @@
-allow sensors persist_file:dir search;
-
-allow sensors sns_file:dir rw_dir_perms;
-allow sensors sns_file:file rw_file_perms;
